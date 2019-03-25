@@ -47,5 +47,27 @@ public class Task1a {
 
     }
 
+    public void repeatOfName(String[] table){
+
+        int number = 0;
+        int sizeTable = table.length;
+        for (int i = 0; i < sizeTable; i++) {
+
+            for (int j = 0; j <sizeTable ; j++) {
+                if(table[i].equals(table[j])){
+                    number++;
+                }
+
+            }
+            if (number!=1){
+                System.out.println(table[i] + " powtarza sie " + number);
+            }
+
+            number = 0;
+
+        }
+
+    }
+
 
 }

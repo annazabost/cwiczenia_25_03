@@ -5,6 +5,7 @@ public class Task1 {
         int number = task1a.numberOfStrings();
         String[] table = task1a.makeTable(number);
         task1a.lookForName(table);
+        task1a.repeatOfName(table);
     }
 
 }
