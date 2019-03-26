@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 public class Task6 {
 
-    public void newFile() throws IOException {
+    public Path newFile() throws IOException {
 
         System.out.println("Podaj tekst.");
         Scanner scanner = new Scanner(System.in);
@@ -19,13 +19,23 @@ public class Task6 {
 
 
         Path path = Paths.get(System.getProperty("user.home"), "Desktop", "nowy");
-        Files.createFile(path);
+        //Files.createFile(path);
 //        List<String> strings = Files.readAllLines(path);
         List<String> strings = new ArrayList<>();
         strings.add(newLine);
-        Files.write(path, strings,StandardOpenOption.APPEND);
+        Files.write(path, strings,StandardOpenOption.CREATE, StandardOpenOption.APPEND);
+        return path;
 
+    }
 
+    public void printFile(Path path){
+
+        try {
+            List<String> strings = Files.readAllLines(path);
+            System.out.println(strings);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 
