@@ -1,6 +1,6 @@
 public class Task5 {
 
-    public void bubbleSort(Integer[] table){
+    public void bubbleSort(Integer... table){
 
         int sizeTable = table.length;
         for (int j = 0; j <sizeTable ; j++) {
@@ -19,6 +19,7 @@ public class Task5 {
             System.out.println(table[i]);
 
         }
+        System.out.println("Koniec");
 
     }
 

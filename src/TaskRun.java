@@ -11,7 +11,10 @@ public class TaskRun {
 //        Task4 task4 = new Task4();
 //        task4.run();
 
-        Task5Test task5 = new Task5Test();
-        task5.run();
+//        Task5Test task5 = new Task5Test();
+//        task5.run();
+        Task6a task6a=new Task6a();
+        task6a.run();
+
     }
 }
